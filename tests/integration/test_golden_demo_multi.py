@@ -3,7 +3,7 @@
 import os
 import sys
 import tempfile
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "synthesis", "src"))
 
 from synthesis.packages.observability.ledger import JsonlLedger
 from synthesis.packages.loop_engine.termination import (

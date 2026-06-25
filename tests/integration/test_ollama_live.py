@@ -1,13 +1,21 @@
 """Live Ollama conformance tests — runs only when OLLAMA_HOST is set."""
 
 import os
+import requests
 import pytest
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
+def _is_ollama_available() -> bool:
+    try:
+        response = requests.get(f"{OLLAMA_HOST}/api/tags", timeout=1.0)
+        return response.status_code == 200
+    except Exception:
+        return False
+
 pytestmark = pytest.mark.skipif(
-    os.getenv("SYNTHESIS_CI") == "1" or False,  # Skip in CI by default
-    reason="Ollama not available in CI — set OLLAMA_HOST and unset SYNTHESIS_CI to run",
+    not _is_ollama_available(),
+    reason=f"Ollama server not reachable at {OLLAMA_HOST}",
 )
 
 

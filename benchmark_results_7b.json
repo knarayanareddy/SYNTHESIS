@@ -2,215 +2,215 @@
   "report": {
     "name": "golden_demo_full",
     "count": 20,
-    "p50_ms": 6794.930728967302,
-    "p95_ms": 8003.110397997088,
-    "p99_ms": 16301.67044679051,
-    "min_ms": 6609.083749935962,
-    "max_ms": 18376.310458988883,
-    "mean_ms": 7435.028291807976,
-    "total_sec": 148.7005658361595
+    "p50_ms": 7591.202166979201,
+    "p95_ms": 8473.661865305623,
+    "p99_ms": 9107.842440290842,
+    "min_ms": 6837.6087920041755,
+    "max_ms": 9266.387584037147,
+    "mean_ms": 7597.102135553723,
+    "total_sec": 151.94204271107446
   },
   "runs": 20,
   "warmup": 2,
   "all_samples": [
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.724823750089854,
-      "duration_ms": 6724.823750089854,
-      "timestamp": 1782391180.659018,
+      "duration_sec": 7.114927457994781,
+      "duration_ms": 7114.927457994781,
+      "timestamp": 1782422419.3014662,
       "metadata": {
         "run": 2,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.8435240829130635,
-      "duration_ms": 6843.5240829130635,
-      "timestamp": 1782391187.510598,
+      "duration_sec": 7.129377417033538,
+      "duration_ms": 7129.377417033538,
+      "timestamp": 1782422426.437781,
       "metadata": {
         "run": 3,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.882401375100017,
-      "duration_ms": 6882.401375100017,
-      "timestamp": 1782391194.400726,
+      "duration_sec": 8.431939459056593,
+      "duration_ms": 8431.939459056593,
+      "timestamp": 1782422434.876184,
       "metadata": {
         "run": 4,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.752507625031285,
-      "duration_ms": 6752.507625031285,
-      "timestamp": 1782391201.161073,
+      "duration_sec": 7.662235999945551,
+      "duration_ms": 7662.235999945551,
+      "timestamp": 1782422442.5448442,
       "metadata": {
         "run": 5,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 7.156571458093822,
-      "duration_ms": 7156.571458093822,
-      "timestamp": 1782391208.3238559,
+      "duration_sec": 6.8376087920041755,
+      "duration_ms": 6837.6087920041755,
+      "timestamp": 1782422449.388243,
       "metadata": {
         "run": 6,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.776382584008388,
-      "duration_ms": 6776.382584008388,
-      "timestamp": 1782391215.108118,
+      "duration_sec": 7.10377733304631,
+      "duration_ms": 7103.77733304631,
+      "timestamp": 1782422456.497396,
       "metadata": {
         "run": 7,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 7.013363832957111,
-      "duration_ms": 7013.363832957111,
-      "timestamp": 1782391222.131577,
+      "duration_sec": 7.1919962499523535,
+      "duration_ms": 7191.9962499523535,
+      "timestamp": 1782422463.6948621,
       "metadata": {
         "run": 8,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 7.457152500050142,
-      "duration_ms": 7457.152500050142,
-      "timestamp": 1782391229.596313,
+      "duration_sec": 7.254971042042598,
+      "duration_ms": 7254.971042042598,
+      "timestamp": 1782422470.955519,
       "metadata": {
         "run": 9,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 7.317605833988637,
-      "duration_ms": 7317.605833988637,
-      "timestamp": 1782391236.923176,
+      "duration_sec": 7.562163916998543,
+      "duration_ms": 7562.163916998543,
+      "timestamp": 1782422478.523056,
       "metadata": {
         "run": 10,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.8366659169550985,
-      "duration_ms": 6836.6659169550985,
-      "timestamp": 1782391243.769278,
+      "duration_sec": 7.688421707949601,
+      "duration_ms": 7688.421707949601,
+      "timestamp": 1782422486.217349,
       "metadata": {
         "run": 11,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 18.376310458988883,
-      "duration_ms": 18376.310458988883,
-      "timestamp": 1782391262.154038,
+      "duration_sec": 7.242510874988511,
+      "duration_ms": 7242.510874988511,
+      "timestamp": 1782422493.465463,
       "metadata": {
         "run": 12,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.787193957949057,
-      "duration_ms": 6787.193957949057,
-      "timestamp": 1782391268.950382,
+      "duration_sec": 7.857837249990553,
+      "duration_ms": 7857.837249990553,
+      "timestamp": 1782422501.3297532,
       "metadata": {
         "run": 13,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.802667499985546,
-      "duration_ms": 6802.667499985546,
-      "timestamp": 1782391275.7615201,
+      "duration_sec": 7.347995875054039,
+      "duration_ms": 7347.995875054039,
+      "timestamp": 1782422508.684351,
       "metadata": {
         "run": 14,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.6892115420196205,
-      "duration_ms": 6689.2115420196205,
-      "timestamp": 1782391282.458233,
+      "duration_sec": 7.72487979196012,
+      "duration_ms": 7724.87979196012,
+      "timestamp": 1782422516.41679,
       "metadata": {
         "run": 15,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 7.0224070840049535,
-      "duration_ms": 7022.4070840049535,
-      "timestamp": 1782391289.487751,
+      "duration_sec": 7.666036959039047,
+      "duration_ms": 7666.036959039047,
+      "timestamp": 1782422524.088947,
       "metadata": {
         "run": 16,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.609083749935962,
-      "duration_ms": 6609.083749935962,
-      "timestamp": 1782391296.1052852,
+      "duration_sec": 9.266387584037147,
+      "duration_ms": 9266.387584037147,
+      "timestamp": 1782422533.361176,
       "metadata": {
         "run": 17,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.61055858398322,
-      "duration_ms": 6610.55858398322,
-      "timestamp": 1782391302.71997,
+      "duration_sec": 7.408042459050193,
+      "duration_ms": 7408.042459050193,
+      "timestamp": 1782422540.8419058,
       "metadata": {
         "run": 18,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.74172879208345,
-      "duration_ms": 6741.72879208345,
-      "timestamp": 1782391309.466746,
+      "duration_sec": 7.822781416005455,
+      "duration_ms": 7822.781416005455,
+      "timestamp": 1782422548.6718879,
       "metadata": {
         "run": 19,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.68363062501885,
-      "duration_ms": 6683.63062501885,
-      "timestamp": 1782391316.1554172,
+      "duration_sec": 7.620240416959859,
+      "duration_ms": 7620.240416959859,
+      "timestamp": 1782422556.298837,
       "metadata": {
         "run": 20,
-        "status": "error"
+        "status": "success"
       }
     },
     {
       "name": "golden_demo_full",
-      "duration_sec": 6.616774583002552,
-      "duration_ms": 6616.774583002552,
-      "timestamp": 1782391322.77697,
+      "duration_sec": 8.007910707965493,
+      "duration_ms": 8007.910707965493,
+      "timestamp": 1782422564.3137379,
       "metadata": {
         "run": 21,
-        "status": "error"
+        "status": "success"
       }
     }
   ]

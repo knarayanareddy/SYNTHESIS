@@ -4,7 +4,7 @@ import os
 import sys
 import tempfile
 import subprocess
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "synthesis", "src"))
 
 
 def _setup_golden_repo(tmpdir: str) -> str:
@@ -48,7 +48,7 @@ class TestCLI:
                     "--ollama-model", "qwen2.5-coder:7b",
                 ],
                 capture_output=True, text=True, timeout=60,
-                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..")},
+                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..", "synthesis", "src")},
             )
 
             # Should succeed (model call stubbed in CI)
@@ -68,7 +68,7 @@ class TestCLI:
                     "--output", output_path,
                 ],
                 capture_output=True, text=True, timeout=60,
-                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..")},
+                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..", "synthesis", "src")},
             )
 
             assert result.returncode == 0
@@ -90,7 +90,7 @@ class TestCLI:
                 [sys.executable, "-m", "synthesis.apps.cli.main",
                  "run", "--task", "bugfix", "--repo", repo],
                 capture_output=True, timeout=60,
-                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..")},
+                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..", "synthesis", "src")},
             )
 
             ledger_path = os.path.join(repo, ".synthesis", "ledger.jsonl")
@@ -100,7 +100,7 @@ class TestCLI:
                 [sys.executable, "-m", "synthesis.apps.cli.main",
                  "ledger", "verify", "--path", ledger_path],
                 capture_output=True, text=True, timeout=30,
-                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..")},
+                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..", "synthesis", "src")},
             )
             assert result.returncode == 0
 
@@ -109,7 +109,7 @@ class TestCLI:
         result = subprocess.run(
             [sys.executable, "-m", "synthesis.apps.cli.main", "doctor"],
             capture_output=True, text=True, timeout=30,
-            env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..")},
+            env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..", "synthesis", "src")},
         )
         assert result.returncode == 0
 
@@ -122,7 +122,7 @@ class TestCLI:
                 [sys.executable, "-m", "synthesis.apps.cli.main",
                  "run", "--task", "bugfix", "--repo", repo],
                 capture_output=True, timeout=60,
-                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..")},
+                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..", "synthesis", "src")},
             )
 
             ledger_path = os.path.join(repo, ".synthesis", "ledger.jsonl")
@@ -130,7 +130,7 @@ class TestCLI:
                 [sys.executable, "-m", "synthesis.apps.cli.main",
                  "dashboard", "--ledger", ledger_path],
                 capture_output=True, text=True, timeout=30,
-                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..")},
+                env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..", "synthesis", "src")},
             )
             assert result.returncode == 0
 
@@ -140,6 +140,6 @@ class TestCLI:
             [sys.executable, "-m", "synthesis.apps.cli.main",
              "run", "--task", "bugfix", "--repo", "/nonexistent/path"],
             capture_output=True, text=True, timeout=30,
-            env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..")},
+            env={**os.environ, "PYTHONPATH": os.path.join(os.path.dirname(__file__), "..", "..", "synthesis", "src")},
         )
         assert result.returncode != 0

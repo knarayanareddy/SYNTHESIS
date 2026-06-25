@@ -3,4 +3,4 @@
 
 def normalize_token(token: str) -> str:
     # Bug: should strip surrounding whitespace before validation.
-    return token.strip().lower()
+    return token.lower()
