@@ -1,0 +1,14 @@
+{
+  "version": "router-score-v1",
+  "weights": {
+    "capability_match": 0.25,
+    "context_fit": 0.15,
+    "role_match": 0.15,
+    "lifecycle_health": 0.10,
+    "latency_score": 0.10,
+    "historical_success_decayed": 0.10,
+    "verifier_score_decayed": 0.05,
+    "low_world_divergence": 0.05,
+    "safety_compatibility": 0.05
+  }
+}

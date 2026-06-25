@@ -1,0 +1,6 @@
+# Synthesis dashboard — static dashboard server
+FROM nginx:alpine
+COPY apps/dashboard_static/ /usr/share/nginx/html/
+EXPOSE 8788
+HEALTHCHECK --interval=10s --timeout=5s --retries=3 \
+  CMD wget -q -O- http://localhost:8788/ || exit 1

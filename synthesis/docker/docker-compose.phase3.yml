@@ -1,0 +1,50 @@
+# SYNTHESIS Phase 3 Docker Compose stack
+# Services: Langfuse (self-hosted) + PostgreSQL
+# All local-first. No cloud dependencies.
+
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: synthesis-postgres
+    environment:
+      POSTGRES_USER: synthesis
+      POSTGRES_PASSWORD: synthesis_local
+      POSTGRES_DB: langfuse
+    ports:
+      - "5435:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U synthesis -d langfuse"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - synthesis-net
+
+  langfuse:
+    image: ghcr.io/langfuse/langfuse:2
+    container_name: synthesis-langfuse
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://synthesis:synthesis_local@postgres:5432/langfuse
+      NEXTAUTH_URL: http://localhost:3000
+      NEXTAUTH_SECRET: synthesis-local-dev-secret-change-in-production
+      SALT: synthesis-local-salt
+      TELEMETRY_ENABLED: "false"
+      LANGFUSE_ENABLE_EXPERIMENTAL_FEATURES: "false"
+    networks:
+      - synthesis-net
+
+volumes:
+  postgres_data:
+
+networks:
+  synthesis-net:
+    driver: bridge

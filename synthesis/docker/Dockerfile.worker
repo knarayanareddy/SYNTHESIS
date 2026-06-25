@@ -1,0 +1,9 @@
+# Synthesis worker — sandboxed execution container
+FROM python:3.11-slim
+WORKDIR /workspace
+COPY src/ /app/src/
+COPY pyproject.toml /app/
+RUN pip install --no-cache-dir -e /app/
+ENV SYNTHESIS_SANDBOX_CWD=/workspace
+ENV SYNTHESIS_MAX_WALL_CLOCK_SEC=900
+CMD ["python", "-c", "import time; print('Synthesis worker ready'); time.sleep(86400)"]
